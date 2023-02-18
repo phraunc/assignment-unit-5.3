@@ -2,6 +2,7 @@ console.log('***** Music Collection *****');
 
 let collection = [];
 
+//FUNCTION addToCollection //
 function addToCollection(title, artist, yearPublished) {
     console.log('In addToCollection function', title, artist, yearPublished);
 
@@ -11,7 +12,7 @@ function addToCollection(title, artist, yearPublished) {
         yearPublished: yearPublished
     }
     collection.push(album);
-    return console.log('This is my Collection',album);
+    return console.log('This is my Collection', album);
 
 }// end fucntion 'addToCollection'.
 addToCollection('Whats My Name Again', 'Blink-182', 1999);
@@ -23,10 +24,34 @@ addToCollection('Piano Man', 'Billy Joel', 1973);
 
 console.log(collection); // console.log the album's in the array
 
-function showCollection(array){
-    console.log('in the showCollection function', array);
-    console.log(array.length[i]);
-    for(i=0; i < array.length; i++){
-        
+// FUNCTION showCollection//
+function showCollection(array) {
+    console.log('In showCollection function', array); // To show what function I am in.
+    console.log('This is how many items are in the array', array.length); // To show how many items are in the array.
+
+    for (let i = 0; i < array.length; i++) { // created a for loop to this array/function.
+        console.log('TITLE:', array[i].title, 'By ARTIST:', array[i].artist, 'PUBLISHED:', array[i].yearPublished);
+
     }
+    return console.log(array);
+
+} // end showCollection function
+
+console.log(showCollection(collection));
+
+//FUNCTION findByArtist// 
+function findByArtist(artist) {
+    console.log('In the findByArtist function', artist);
+
+    let artistArray = [];
+
+    for (let i = 0; i < collection.length; i++)
+        if (collection[i] === artist) {
+            artistArray.push(collection[i]);
+            console.log(artistArray);
+        }
+    return artistArray;
+
 }
+
+
