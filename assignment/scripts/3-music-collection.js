@@ -20,3 +20,13 @@ addToCollection('Dammit', 'Blink-182', 1997);
 addToCollection('Let Her Cry', 'Hootie and the Blowfish', 1994);
 addToCollection('Only Want to be with You', 'Hootie and the Blowfish', 1994);
 addToCollection('Piano Man', 'Billy Joel', 1973);
+
+console.log(collection); // console.log the album's in the array
+
+function showCollection(array){
+    console.log('in the showCollection function', array);
+    console.log(array.length[i]);
+    for(i=0; i < array.length; i++){
+        
+    }
+}
