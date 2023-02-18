@@ -33,7 +33,7 @@ function showCollection(array) {
         console.log('TITLE:', array[i].title, 'By ARTIST:', array[i].artist, 'PUBLISHED:', array[i].yearPublished);
 
     }
-    return console.log(array);
+    return console.log('Great songs!');
 
 } // end showCollection function
 
@@ -41,17 +41,21 @@ console.log(showCollection(collection));
 
 //FUNCTION findByArtist// 
 function findByArtist(artist) {
-    console.log('In the findByArtist function', artist);
+    console.log('In the findByArtist function', artist);// letting me know what function i am in.
 
-    let artistArray = [];
+    let artistArray = []; // variable as an empty array
 
-    for (let i = 0; i < collection.length; i++)
-        if (collection[i] === artist) {
+    for (let i = 0; i < collection.length; i++)// for/else  loop
+
+        if (artist === collection[i].artist) {
             artistArray.push(collection[i]);
-            console.log(artistArray);
+            console.log('Results', artistArray);
+        }
+        else {
+             artistArray = [];
         }
     return artistArray;
-
 }
-
-
+console.log(findByArtist('Blink-182'));
+console.log(findByArtist('Hootie and the Blowfish'));
+console.log(findByArtist('Billy Joel'));
