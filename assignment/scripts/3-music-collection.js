@@ -56,6 +56,11 @@ function findByArtist(artist) {
         }
     return artistArray;
 }
+// console.logging all artits in collection and without.
 console.log(findByArtist('Blink-182'));
 console.log(findByArtist('Hootie and the Blowfish'));
 console.log(findByArtist('Billy Joel'));
+console.log(findByArtist('Disturbed'));
+
+// STRETCH GOALS//
+
